@@ -10,30 +10,75 @@
 
 /* CSS reset */
 
-
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 
 /* Global Styles */
-
-html {
-  font-family: verdana, geneva, tahoma, sans-serif; 
-  background-color: #020659;
-  box-sizing: border-box;
-}
 
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
-body {
-    margin: 0 auto;
-    width: 375px;
-    background-color: #ffffff;
+html {
+  font-family: verdana, geneva, tahoma, sans-serif; 
+  background-color: #020659;
 }
 
 header{
-    background-image: linear-gradient(to right, black, #2104D9);
+    background-color:#030A8C;
 }
+
+body {
+    width: 375px;
+    margin: 0 auto;
+    min-width: 375px;
+    max-width: 875px;
+    background-color: #ffffff;
+}
+
+
 
 nav {
     position: absolute;
@@ -116,7 +161,7 @@ li, a {
 
 .logo {
     position:absolute;
-    top: 30px;
+    top: 20px;
     right: 80px;
     font-size: 2em;
     text-decoration: none;
@@ -133,72 +178,6 @@ footer p {
     color:#590242;
 }
 
-/*trending*/
-#trending {
-    padding-top:100px;
-}
-
-#trending h2 {
-    padding-left: 10px;
-}
-
-/*your playlists*/
-#playlists {
-   padding: 10px;
-}
-
-#playlists h2 {
-    padding-left: 10px;
-}
-
-#playlists div {
-    background-color:#2699FB;
-}
-
-#playlists section{
-    height: 300px;
-    background-color:#0D8DF8;
-    margin: 0px;
-}
-
-.playlists-blue {
-    background-color: #0D8DF8;
-    height:300px;
-    width: 200px;   
-}
-
-#playlists .scroll div {
-    top: 0px;
-}
-
-/*curated playlists*/
-
-#curated {
-    padding: 10px;
-}
-
-#curated h2 {
-    padding-left: 10px;
-}
-
-#curated div {
-    background-color:#030A8C;
-}
-#curated section {
-    height: 300px;
-    
-}
-
-.curated-blue {
-    background-color: #020659;
-    height:300px;
-    width: 200px; 
-}
-
-#curated .scroll div {
-    top: 0px;
-    background-color:#030A8C;
-}
 
 
 /* custom scroll */
@@ -226,10 +205,13 @@ footer p {
 
 dl {
     display: flex;
+    margin-top: 0;
 }
 
 dt {
     padding-right: 5px;
+    padding-bottom: 10px;
+    margin-top: 0;
 }
 
 audio {
@@ -302,6 +284,90 @@ audio::-webkit-media-controls-enclosure {
     background: #ffffff;
 }
 
+/*trending*/
+#trending {
+    padding-top:100px;
+}
+
+#trending h2 {
+    padding-left: 10px;
+}
+
+/*playlists*/
+
+#playlists {
+    padding: 10px;
+    height: 425px;
+ }
+ 
+ #playlists h2 {
+    padding-left: 10px;
+ }
+ 
+ 
+ #playlists div {
+    background-color:#0D8DF8;    
+ }
+ 
+ #playlists section{
+    height: 275px;
+    width: 150px;
+    padding: 10px;
+ }
+ 
+ #playlists-blue {
+    
+    height:300px;
+    width: 175px;
+    padding: 10px;
+    text-align: center;
+ }
+ 
+ #playlists .scroll div {
+    top: 0px;
+    height: 95%;
+    width: 100%;
+    background-color: #2699FB;
+    margin: 5px
+ }
+
+ /*curated playlists*/
+
+ #curated {
+    padding: 10px;
+    height: 425px;
+ }
+ 
+ #curated h2 {
+    padding-left: 10px;
+ }
+ 
+ 
+ #curated div {
+    background-color:#030A8C;    
+ }
+ 
+ #curated section{
+    height: 275px;
+    width: 150px;
+    padding: 10px;
+ }
+ 
+ #curated-blue {
+    
+    height:300px;
+    width: 175px;
+    padding: 10px;
+    text-align: center;
+ }
+ 
+ #curated .scroll div {
+    top: 0px;
+    height: 95%;
+    width: 100%;
+    background-color: #020873;
+    margin: 5px
+ }
 
 /* hamburger */
 
@@ -377,6 +443,10 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     body {
         width: 834px;
     }
+    
+    nav a:hover{
+        background-color: #590242;
+    }
 
     ul {
         overflow: visible;
@@ -389,20 +459,108 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         width: 834px;
         padding-top: 10px;
     }
-    
+
+     label span, input {
+        display: none;
+    }
+
     li, a {
         text-align: center;
         padding: 0px;
     }
 
+
     .logo {
         position: relative;
         top: 0px;
-        left: -30px;
+        left: 10px;
     }
-   
-    label span, input {
-        display: none;
+    
+    #playlists {
+        padding: 20px;
+        width:50%;
+        height: 500px;
     }
+
+    #playlists {
+        float: left;
+    }
+
+    #playlists h2 {
+        padding-top: 70px;
+    }
+
+    #playlists .scroll, #curated .scroll{
+        grid-template-columns: 1fr;
+        height: 450px;
+        width: 400px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    #playlists section {
+        height:125px;
+    }
+
+    .playlists-blue {
+        padding: 10px;
+        text-align: left;
+     }
+    
+     .playlists-blue img {
+        float: left;
+        padding: 10px 10px 0 10px;
+     }
+    
+    #playlists .scroll div {
+        top: 0px;
+        height: 150px;
+        width: 300px;
+        padding: 0;
+        margin: 5px
+    }
+
+    #curated {
+        position: relative;
+        top: -450px;
+        right: -410px;
+        padding-top:20px;
+        height:400px;
+        width: 50%;
+    }
+    #curated section {
+        height:125px;
+    }
+
+    .curated-blue {
+        padding: 10px;
+        text-align: left;
+        
+     }
+    
+     .curated-blue img {
+        float: left;
+        padding: 10px 10px 0 10px;
+     }
+    
+    #curated .scroll div {
+        top: 0px;
+        height: 150px;
+        width: 300px;
+        padding: 0;
+        margin: 5px
+    }
+
+     a.more {
+        float: right;
+        margin-right: 20px;
+    }
+
+    footer {
+        position: relative;
+        top: 150px;
+        z-index: -1;
+    }
+
 }
 
